@@ -25,9 +25,11 @@ class App : AppCompatActivity() {
         setContentView(binding.root)
 
 //        println(someClass.doAThing())
+//        println(someClass.doAThing())
 //        println(someClass.doSomeOther())
-        val beginTransaction = supportFragmentManager.beginTransaction()
-        beginTransaction.replace(R.id.container, FirstFragment())
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, FirstFragment())
             .commit()
     }
 }

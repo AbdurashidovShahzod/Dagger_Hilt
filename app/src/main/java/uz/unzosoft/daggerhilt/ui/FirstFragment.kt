@@ -40,12 +40,11 @@ class FirstFragment : Fragment() {
     @Inject
     lateinit var someClass: SomeClass
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding!!.tv.text = someClass.doSomeOther()
+        binding!!.tv.text = someClass.doAThing()
+
     }
 
-
     companion object {
-
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             FirstFragment().apply {

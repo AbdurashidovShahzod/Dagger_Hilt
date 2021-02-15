@@ -1,5 +1,6 @@
 package uz.unzosoft.daggerhilt.di
 
+import com.google.gson.Gson
 import uz.unzosoft.daggerhilt.di.module.ISecondDependency
 import uz.unzosoft.daggerhilt.di.module.SecondDependencyInterface
 import uz.unzosoft.daggerhilt.di.module.SomeDependency
@@ -10,17 +11,13 @@ import javax.inject.Singleton
 @Singleton
 class SomeClass @Inject constructor(
     private val someOtherClass: SomeOtherClass,
-    private val someDependency: SomeDependency,
-    private val iSecondDependency: SecondDependencyInterface
+    private val iSecondDependency: SecondDependencyInterface,
+//    private val gson: Gson
+
 ) {
-    fun doAThing() = "Look I did a thing!!!"
+    fun doAThing(): String = "Look I got : ${iSecondDependency.getSecond()}"
 
     fun doSomeOther(): String {
         return someOtherClass.doAThing()
     }
-
-    fun someDependency(): String {
-        return "Some class ${someDependency.getSome()}"
-    }
-
 }
