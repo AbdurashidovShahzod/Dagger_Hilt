@@ -5,5 +5,5 @@ import javax.inject.Singleton
 
 @Singleton
 class SomeOtherClass @Inject constructor() {
-    fun doAThing() = "Look I did a other thing!!!"
+    fun doAThing() = "Some other class...!!!"
 }
