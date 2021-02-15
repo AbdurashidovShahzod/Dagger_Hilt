@@ -10,11 +10,13 @@ import javax.inject.Singleton
 @Module
 @InstallIn(ApplicationComponent::class)
 class MyModuleP {
+
     @Singleton
     @Provides
-    fun providerSecondDependency(stringDependency: String): SecondDependencyInterface {
-        return ISecondDependency(stringDependency)
+    fun providerSecondDependency1(): SecondDependencyInterface {
+        return ISecondDependency()
     }
+
 
     @Singleton
     @Provides
@@ -25,4 +27,17 @@ class MyModuleP {
     @Singleton
     @Provides
     fun providesGson(): Gson = Gson()
+
+    @Singleton
+    @Provides
+    fun providesSecondDependencyA(): SecondDependencyInterface {
+        return ISecondDependencyA()
+    }
+
+    @Singleton
+    @Provides
+    fun providesSecondDependencyB(): SecondDependencyInterface {
+        return ISecondDependencyB()
+    }
+
 }

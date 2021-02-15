@@ -2,9 +2,9 @@ package uz.unzosoft.daggerhilt.di.module
 
 import javax.inject.Inject
 
-class ISecondDependency @Inject constructor() : SecondDependencyInterface {
+class ISecondDependencyB @Inject constructor() : SecondDependencyInterface {
     override fun getSecond(): String {
-        return "Second dependency"
+        return "Second dependency B"
     }
 
 }
