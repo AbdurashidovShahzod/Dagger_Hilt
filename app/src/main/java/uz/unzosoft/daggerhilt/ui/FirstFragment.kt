@@ -40,7 +40,7 @@ class FirstFragment : Fragment() {
     @Inject
     lateinit var someClass: SomeClass
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding!!.tv.text = someClass.doAThing()
+        binding!!.tv.text = someClass.secondDependencyA()
 
     }
 

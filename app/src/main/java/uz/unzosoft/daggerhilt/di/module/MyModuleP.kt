@@ -5,11 +5,14 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import uz.unzosoft.daggerhilt.di.component.Impl1
+import uz.unzosoft.daggerhilt.di.component.Impl2
 import javax.inject.Singleton
 
 @Module
 @InstallIn(ApplicationComponent::class)
 class MyModuleP {
+
 
     @Singleton
     @Provides
@@ -28,11 +31,13 @@ class MyModuleP {
     @Provides
     fun providesGson(): Gson = Gson()
 
+
     @Singleton
     @Provides
     fun providesSecondDependencyA(): SecondDependencyInterface {
         return ISecondDependencyA()
     }
+
 
     @Singleton
     @Provides
