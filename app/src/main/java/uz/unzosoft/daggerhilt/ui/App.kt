@@ -10,7 +10,7 @@ import uz.unzosoft.daggerhilt.di.module.SomeOtherClass
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class App : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
     /***
