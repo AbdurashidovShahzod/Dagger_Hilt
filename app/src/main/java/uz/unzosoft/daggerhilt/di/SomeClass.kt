@@ -2,6 +2,7 @@ package uz.unzosoft.daggerhilt.di
 
 import android.content.Context
 import com.google.gson.Gson
+import dagger.hilt.android.qualifiers.ApplicationContext
 import uz.unzosoft.daggerhilt.di.module.ISecondDependency
 import uz.unzosoft.daggerhilt.di.module.SecondDependencyInterface
 import uz.unzosoft.daggerhilt.di.module.SomeDependency
@@ -13,8 +14,8 @@ import javax.inject.Singleton
 class SomeClass @Inject constructor(
     private val someOtherClass: SomeOtherClass,
     private val iSecondDependency: SecondDependencyInterface,
-    private val gson: Gson,
-    private val context: Context
+    private val gson: Gson
+
 ) {
     fun doAThing(): String = "Look I got : ${iSecondDependency.getSecond()}"
 
