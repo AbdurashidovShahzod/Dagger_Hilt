@@ -24,9 +24,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        println(someClass.doAThing())
-        println(someClass.doSomeOther())
-
-
+//        println(someClass.doAThing())
+//        println(someClass.doSomeOther())
+        val beginTransaction = supportFragmentManager.beginTransaction()
+        beginTransaction.replace(R.id.container, FirstFragment())
+            .commit()
     }
 }
